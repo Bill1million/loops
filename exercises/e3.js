@@ -9,9 +9,13 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
-
-}
+  let sum = 0;
+  for (let i = 0; i < array.length; i++)
+  sum += array[i];
+ const average = sum/array.length;
+ console.log(average);
+ return average;
+ };
 
 
 /** 
@@ -21,12 +25,17 @@ export function getAverage(array) {
  * Example2: getStringSum("GHIUJUHSG") => 0
  * */ 
 
+
 export function getStringSum(str) {
-  // Your code goes here...
-
+  const strArr = str.split("");
+  let sum = 0;
+  for(let i = 0; i < strArr.length; i++){
+     if(+strArr[i]){
+        sum += +strArr[i];
+     };
+  };
+  return sum;
 }
-
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
 // If the test has all tests passed, switch to the next exercise file
