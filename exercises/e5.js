@@ -4,10 +4,14 @@
 // Array example: bankAccounts in /data/data.js
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
-export function getAllClientNames(array) {
-  // Your code goes here...
+import { bankAccounts } from "../data/data";
 
+export function getAllClientNames(array) {
+  const clientName = bankAccounts.map(bankAccounts => bankAccounts.name);
+  return clientName;
 }
+
+
 
 
 
