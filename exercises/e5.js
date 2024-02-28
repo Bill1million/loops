@@ -6,12 +6,16 @@
 
 import { bankAccounts } from "../data/data";
 
+
+
 export function getAllClientNames(array) {
-  const clientName = bankAccounts.map(bankAccounts => bankAccounts.name);
-  return clientName;
+    const clientName = [];
+for (i = 0; i < bankAccounts.length; i++){
+    if (this.name){  clientName.push(new person());
+        
+    }
 }
-
-
+}
 
 
 
