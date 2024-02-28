@@ -1,22 +1,16 @@
-
 // EXERCISE 5
 // Return an array of all bank account holders names
 // Array example: bankAccounts in /data/data.js
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
-import { bankAccounts } from "../data/data";
-
-
 
 export function getAllClientNames(array) {
-    const clientName = [];
-for (i = 0; i < bankAccounts.length; i++){
-    if (this.name){  clientName.push(new person());
-        
-    }
+  const clientNames = [];
+  for (let i = 0; i < array.length; i++) {
+    clientNames.push(array[i].name);
+  }
+  return clientNames;
 }
-}
-
 
 
 // === TEST YOURSELF ===
