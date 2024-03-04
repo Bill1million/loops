@@ -4,7 +4,18 @@
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllDepositsGreaterThanOneHundred(array) {
-  const viableDeposit = [];
+  let viableDeposit = [];
+  
+  for (let account of array) {
+      if (account.deposits) {
+        for (let amount of account.deposits) {
+          if (amount > 100) {
+        viableDeposit.push(amount);
+        }
+      } 
+    } 
+  }
+  return viableDeposit;
 }
 
 // === TEST YOURSELF ===
