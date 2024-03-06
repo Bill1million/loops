@@ -5,28 +5,28 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  {
-    const namesWithA = []; 
-    const namesWithoutA = []; 
-  
-    for (let i = 0; i < array.length; i++) {
-      const currentName = array[i];
-      let containsA = false;
+  const namesWithA = [];
+  const namesWithoutA = [];
 
-      for (let j = 0; j < currentName.length; j++) {
-        if (currentName[j] === 'a' || currentName[j] === 'A') {
-          containsA = true;
-          break;
-        }
-      } if (containsA) {
-        namesWithA.push(currentName);
-      } else {
-        namesWithoutA.push(currentName);
+  for (let i = 0; i < array.length; i++) {
+    const currentName = array[i];
+    let hasA = false;
+
+    for (let j = 0; j < currentName.length; j++) {
+      if (currentName[j] === "a" || currentName[j] === "A") {
+        hasA = true;
+        break;
       }
     }
-    return [namesWithA, namesWithoutA]; 
+    if (hasA) {
+      namesWithA.push(currentName);
+    } else {
+      namesWithoutA.push(currentName);
+    }
   }
+  return [namesWithA, namesWithoutA];
 }
+
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"
 // If the test has all tests passed, switch to the next exercise file
